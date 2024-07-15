@@ -1,0 +1,27 @@
+<?php
+
+return array (
+  'add' => ' اضافة طبيب',
+  'all' => ' عرض الكل  ',
+  'close' => ' اغلاق ',
+  'date_update' => ' تاريخ الاضافة   ',
+  'delete' => 'حذف  ',
+  'doctor' => ' الاطباء   ',
+  'edit' => 'تعديل',
+  'email' => ' ايميل  ',
+  'enter_email' => ' اكتب هنا الايميل    ',
+  'enter_name' => ' اكتب هنا الاسم الطبيب    ',
+  'enter_password' => ' اكتب هنا كلمة السر     ',
+  'enter_section' => '  اختيار القسم    ',
+  'enter_status' => ' اضافة الحالة   ',
+  'enter_tele' => ' اضافة تليفون  ',
+  'operation' => ' العمليات  ',
+  'phone' => ' تليفون  ',
+  'save' => 'حفظ  ',
+  'section' => ' القسم  ',
+  'status' => ' الحالة  ',
+  'status_0' => 'غير مفعل',
+  'status_1' => 'مفعل',
+  'upload' => ' رفع صورة ',
+  'want_delete' => '؟هل تريد الحذف   ',
+);
