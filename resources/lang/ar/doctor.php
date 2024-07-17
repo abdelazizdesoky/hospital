@@ -1,11 +1,13 @@
 <?php
 
 return array (
+  'Appointments' => 'مواعيد',
   'add' => ' اضافة طبيب',
   'all' => ' عرض الكل  ',
   'close' => ' اغلاق ',
   'date_update' => ' تاريخ الاضافة   ',
   'delete' => 'حذف  ',
+  'delete_doctor' => 'حذف طبيب',
   'doctor' => ' الاطباء   ',
   'edit' => 'تعديل',
   'email' => ' ايميل  ',
@@ -15,6 +17,7 @@ return array (
   'enter_section' => '  اختيار القسم    ',
   'enter_status' => ' اضافة الحالة   ',
   'enter_tele' => ' اضافة تليفون  ',
+  'img' => 'صورة',
   'operation' => ' العمليات  ',
   'phone' => ' تليفون  ',
   'save' => 'حفظ  ',

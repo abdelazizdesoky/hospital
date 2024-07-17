@@ -23,7 +23,7 @@ class Doctor extends Model
        /**
      * Get the Doctor's image.
      */
-    public function image(): MorphOne
+    public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
 

@@ -84,6 +84,19 @@
 										</div><!-- input-group -->
 										</div>
 
+                                        <div class="col-lg-6">
+                                            <select multiple="multiple"  name="Appointments" class="form-control select"  >
+                                            <option label="{{trans('doctor.Appointments')}}" disabled>
+                                                </option>
+                                                @foreach ($Appointments as $Appointment)
+                                                </option>
+                                                <option value="{{$Appointment->id}}">
+                                                    {{$Appointment->name}}
+                                                </option>
+                                            @endforeach
+                                            </select>
+                                        </div>
+
                                         <div class="form-group col-md-8">
 
 										</div>
@@ -116,6 +129,9 @@
 										@endforeach
 										</select>
 									</div><!-- col-4 -->
+
+
+
 
 							<div class="row row-xs align-items-center mg-b-20 border border-secondary rounded">
                                 <div class="col-md-1">
@@ -151,6 +167,7 @@
 				<!-- row closed -->
 			</div>
 			<!-- Container closed -->
+            @include('Dashboard.messages_alert')
 		</div>
 		<!-- main-content closed -->
 @endsection
@@ -186,4 +203,5 @@
   <!--Internal  Notify js -->
   <script src="{{URL::asset('Dashboard/plugins/notify/js/notifIt.js')}}"></script>
   <script src="{{URL::asset('/plugins/notify/js/notifit-custom.js')}}"></script>
+
 @endsection

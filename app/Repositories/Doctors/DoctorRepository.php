@@ -4,6 +4,7 @@ namespace App\Repositories\Doctors;
 use App\Interfaces\Doctors\DoctorRepositoryInterface;
 use App\Models\Doctor;
 use App\Models\Section;
+use App\Models\Appointment;
 use Illuminate\Support\Facades\Hash;
 use App\Traits\UploadTrait;
 use Illuminate\Support\Facades\DB;
@@ -26,9 +27,12 @@ class DoctorRepository implements DoctorRepositoryInterface
 
  public function create($request)
  {
-
+     //get section
     $Sections = Section::all();
-    return view('Dashboard.Doctor.create' ,compact('Sections'));
+    //get Appointments
+    $Appointments = Appointment::all();
+
+    return view('Dashboard.Doctor.create' ,compact('Sections','Appointments'));
 
  }
 
@@ -84,12 +88,24 @@ class DoctorRepository implements DoctorRepositoryInterface
     public function destroy($request)
     {
 
-     Doctor::findOrfail($request->id)->delete();
+    if ($request->page_id==1) {
+
+        if ($request->filename) {
+         $this->Delete_attachment('upload_image','Doctors/'.$request->filename,$request->id,$request->filename);
+        }
+
+        Doctor::destroy($request->id);
+        session()->flash('delete');
+        return redirect()->route('doctors.index');
+
+    } else {
+        # code...
+    }
+
 
 
           session()->flash('delete');
 
-         return redirect()->route('Doctors.index');
 
     }
 

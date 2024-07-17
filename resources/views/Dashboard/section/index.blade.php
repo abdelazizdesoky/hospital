@@ -72,7 +72,7 @@
 											<tr>
 												<td>{{$section->id}}</td>
 												<td>{{$section->name}}</td>
-                                                <td>{{$section->description}}</td>
+                                                <td>{{Str::limit($section->description,50)}}</td>
                                                 <td> {{ $section->created_at->diffForHumans() }}</td>
                                                 <td>
                                                  <a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"  data-toggle="modal" href="#edit{{$section->id}}"><i class="las la-pen"></i></a>

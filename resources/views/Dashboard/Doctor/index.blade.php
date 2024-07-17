@@ -8,8 +8,7 @@
 <link href="{{URL::asset('Dashboard/plugins/datatable/css/responsive.dataTables.min.css')}}" rel="stylesheet">
 <link href="{{URL::asset('Dashboard/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
 
- <!--Internal   Notify -->
- <link href="{{URL::asset('Dashboard/plugins/notify/css/notifIt.css')}}" rel="stylesheet"/>
+
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
@@ -66,6 +65,8 @@
 									<table class="table text-md-nowrap" id="example1">
 										<thead>
 											<tr>
+                                                <th class="wd-15p border-bottom-0">#</th>
+                                                <th class="wd-15p border-bottom-0">{{trans('doctor.img')}}</th>
 												<th class="wd-15p border-bottom-0">{{trans('Dashboard/doctor.doctor')}}</th>
 												<th class="wd-15p border-bottom-0">{{trans('Dashboard/doctor.email')}}</th>
 												<th class="wd-20p border-bottom-0">{{trans('Dashboard/doctor.phone')}}</th>
@@ -78,6 +79,18 @@
 										<tbody>
                                           @foreach ($Doctors as $doctor)
 											<tr>
+                                                <td>{{$loop->iteration}}</td>
+                                                <td>
+                                                    @if($doctor->image)
+                                                    <img src="{{Url::asset('Dashboard/img/Doctors/'.$doctor->image->filename)}}"
+                                                         height="50px" width="50px" alt="">
+
+                                                @else
+                                                    <img src="{{Url::asset('Dashboard/img/6.jpg')}}" height="50px"
+                                                         width="50px" alt="">
+                                                @endif
+
+                                                </td>
 												<td>{{$doctor->name}}</td>
                                                 <td>{{$doctor->email}}</td>
                                                 <td>{{$doctor->phone}}</td>
@@ -92,6 +105,8 @@
                                                  <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"  data-toggle="modal" href="#delete{{$doctor->id}}"><i class="las la-trash"></i></a>
                                                 </td>
 											</tr>
+                                            @include('Dashboard.Doctor.delete')
+                                            @include('Dashboard.Doctor.delete_select')
                                        @endforeach
 
 										</tbody>
@@ -129,8 +144,5 @@
 <!--Internal  Datatable js -->
 <script src="{{URL::asset('Dashboard/js/table-data.js')}}"></script>
 
-  <!--Internal  Notify js -->
-  <script src="{{URL::asset('Dashboard/plugins/notify/js/notifIt.js')}}"></script>
-  <script src="{{URL::asset('/plugins/notify/js/notifit-custom.js')}}"></script>
 
 @endsection
