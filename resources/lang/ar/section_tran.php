@@ -6,6 +6,7 @@ return array (
   'close' => ' اغلاق ',
   'date_update' => ' تاريخ الاضافة   ',
   'delete' => 'حذف  ',
+  'description' => 'الوصف',
   'edit' => 'تعديل',
   'operation' => ' العمليات  ',
   'save' => 'حفظ  ',

@@ -60,9 +60,10 @@
 										<thead>
 											<tr>
 												<th class="border-bottom-0">#</th>
-												<th class="border-bottom-0">{{trans('Dashboard/section_tran.section')}}</th>
-												<th class="border-bottom-0">{{trans('Dashboard/section_tran.date_update')}}</th>
-												<th class="border-bottom-0">{{trans('Dashboard/section_tran.operation')}}</th>
+												<th class="border-bottom-0">{{trans('section_tran.section')}}</th>
+                                                <th class="border-bottom-0">{{trans('section_tran.description')}}</th>
+												<th class="border-bottom-0">{{trans('section_tran.date_update')}}</th>
+												<th class="border-bottom-0">{{trans('section_tran.operation')}}</th>
 
 											</tr>
 										</thead>
@@ -71,6 +72,7 @@
 											<tr>
 												<td>{{$section->id}}</td>
 												<td>{{$section->name}}</td>
+                                                <td>{{$section->description}}</td>
                                                 <td> {{ $section->created_at->diffForHumans() }}</td>
                                                 <td>
                                                  <a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"  data-toggle="modal" href="#edit{{$section->id}}"><i class="las la-pen"></i></a>

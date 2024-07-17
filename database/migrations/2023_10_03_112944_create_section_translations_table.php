@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('section_id')->unsigned();
             $table->string('locale')->index();
             $table->string('name');
-
+            $table->longText('description');
             $table->unique(['section_id', 'locale']);
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');
         });
