@@ -11,10 +11,10 @@
 					<div class="left-content">
 						<div>
 						  <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi,Admin - {{ Auth::getUser()->name }}</h2>
-						  <p class="mg-b-0">Sales monitoring Dashboard template.</p>
+						  <p class="mg-b-0">Sales monitoring dashboard template.</p>
 						</div>
 					</div>
-					<div class="main-Dashboard-header-right">
+					<div class="main-dashboard-header-right">
 						<div>
 							<label class="tx-13">Customer Ratings</label>
 							<div class="main-star">
@@ -55,7 +55,7 @@
 									</div>
 								</div>
 							</div>
-							<span id="compositeline" class="pt-1">10,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
+							<span id="compositeline" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
 						</div>
 					</div>
 					<div class="col-xl-3 col-lg-6 col-md-6 col-xm-12">
@@ -158,7 +158,7 @@
 						</div>
 					</div>
 					<div class="col-lg-12 col-xl-5">
-						<div class="card card-Dashboard-map-one">
+						<div class="card card-dashboard-map-one">
 							<label class="main-content-label">Sales Revenue by Customers in USA</label>
 							<span class="d-block mg-b-20 text-muted tx-12">Sales Performance of all states in the United States</span>
 							<div class="">
@@ -181,7 +181,7 @@
 								<div class="list-group list-lg-group list-group-flush">
 									<div class="list-group-item list-group-item-action" href="#">
 										<div class="media mt-0">
-											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('Dashboard/img/faces/3.jpg')}}" alt="Image description">
+											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('assets/img/faces/3.jpg')}}" alt="Image description">
 											<div class="media-body">
 												<div class="d-flex align-items-center">
 													<div class="mt-0">
@@ -197,7 +197,7 @@
 									</div>
 									<div class="list-group-item list-group-item-action" href="#">
 										<div class="media mt-0">
-											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('Dashboard/img/faces/11.jpg')}}" alt="Image description">
+											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('assets/img/faces/11.jpg')}}" alt="Image description">
 											<div class="media-body">
 												<div class="d-flex align-items-center">
 													<div class="mt-1">
@@ -213,7 +213,7 @@
 									</div>
 									<div class="list-group-item list-group-item-action" href="#">
 										<div class="media mt-0">
-											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('Dashboard/img/faces/17.jpg')}}" alt="Image description">
+											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('assets/img/faces/17.jpg')}}" alt="Image description">
 											<div class="media-body">
 												<div class="d-flex align-items-center">
 													<div class="mt-1">
@@ -229,7 +229,7 @@
 									</div>
 									<div class="list-group-item list-group-item-action" href="#">
 										<div class="media mt-0">
-											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('Dashboard/img/faces/15.jpg')}}" alt="Image description">
+											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('assets/img/faces/15.jpg')}}" alt="Image description">
 											<div class="media-body">
 												<div class="d-flex align-items-center">
 													<div class="mt-1">
@@ -245,7 +245,7 @@
 									</div>
 									<div class="list-group-item list-group-item-action br-br-7 br-bl-7" href="#">
 										<div class="media mt-0">
-											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('Dashboard/img/faces/6.jpg')}}" alt="Image description">
+											<img class="avatar-lg rounded-circle ml-3 my-auto" src="{{URL::asset('assets/img/faces/6.jpg')}}" alt="Image description">
 											<div class="media-body">
 												<div class="d-flex align-items-center">
 													<div class="mt-1">
@@ -350,7 +350,7 @@
 				<!-- row opened -->
 				<div class="row row-sm row-deck">
 					<div class="col-md-12 col-lg-4 col-xl-4">
-						<div class="card card-Dashboard-eight pb-2">
+						<div class="card card-dashboard-eight pb-2">
 							<h6 class="card-title">Your Top Countries</h6><span class="d-block mg-b-10 text-muted tx-12">Sales performance revenue based by country</span>
 							<div class="list-group">
 								<div class="list-group-item border-top-0">
@@ -438,26 +438,4 @@
 			</div>
 		</div>
 		<!-- Container closed -->
-@endsection
-@section('js')
-<!--Internal  Chart.bundle js -->
-<script src="{{URL::asset('Dashboard/plugins/chart.js/Chart.bundle.min.js')}}"></script>
-<!-- Moment js -->
-<script src="{{URL::asset('Dashboard/plugins/raphael/raphael.min.js')}}"></script>
-<!--Internal  Flot js-->
-<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.js')}}"></script>
-<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.pie.js')}}"></script>
-<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.resize.js')}}"></script>
-<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.categories.js')}}"></script>
-<script src="{{URL::asset('Dashboard/js/Dashboard.sampledata.js')}}"></script>
-<script src="{{URL::asset('Dashboard/js/chart.flot.sampledata.js')}}"></script>
-<!--Internal Apexchart js-->
-<script src="{{URL::asset('Dashboard/js/apexcharts.js')}}"></script>
-<!-- Internal Map -->
-<script src="{{URL::asset('Dashboard/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{URL::asset('Dashboard/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
-<script src="{{URL::asset('Dashboard/js/modal-popup.js')}}"></script>
-<!--Internal  index js -->
-<script src="{{URL::asset('Dashboard/js/index.js')}}"></script>
-<script src="{{URL::asset('Dashboard/js/jquery.vmap.sampledata.js')}}"></script>
 @endsection

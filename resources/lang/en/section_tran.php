@@ -1,16 +1,26 @@
 <?php
 
 return array (
+  'Close' => '',
+  'Warning' => '',
   'add' => 'Add Section',
+  'add_section' => '',
   'all' => '  Show All  ',
   'close' => ' Close ',
+  'created_at' => '',
   'date_update' => '  Date Update  ',
   'delete' => 'Delete  ',
+  'delete_sections' => '',
   'description' => '',
   'edit' => 'ُEdit  ',
+  'edit_sections' => '',
+  'name' => '',
+  'name_sections' => '',
   'operation' => ' Operatins  ',
+  'processes' => '',
   'save' => 'Save  ',
   'section' => ' Section  ',
   'sections' => ' Sections ',
+  'submit' => '',
   'want_delete' => 'Do want Delete ? ',
 );

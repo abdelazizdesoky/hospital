@@ -1,22 +1,20 @@
 <?php
 
-
-return [
-    'app' =>'جهازى ',
-    'Welcome' =>'مرحبا بكم ',
-    'main'  =>'الرئيسية',
-    'index'  =>'لوحة تحكم   ',
-    'section'=>'الاقسام ',
-    'sectionall'=>'عرض الاقسام ',
-    'Select_Enter' =>'اختار الدخول ',
-     'Choose_list' =>'اختار من القائمة ',
-     'user' =>'الدخول كمستخدم ',
-     'admin' =>'الدخول كالمشرف  ',
-     'Forgot_password'  =>'نسيت كلمة المرور ',
-     'Create_anAccount' =>'عمل حساب جديد ',
-     'Sign_In'          =>'دخول ',
-      'email'           => 'بريد الكترونى ',
-      'password'        => 'كلمة المرور ',
-      'have_account'    =>'ليس لدى حساب '
-
-];
+return array (
+  'Choose_list' => 'اختار من القائمة ',
+  'Create_anAccount' => 'عمل حساب جديد ',
+  'Forgot_password' => 'نسيت كلمة المرور ',
+  'Select_Enter' => 'اختار الدخول ',
+  'Sign_In' => 'دخول ',
+  'Welcome' => 'مرحبا بكم ',
+  'admin' => 'الدخول كالمشرف  ',
+  'app' => 'جهازى ',
+  'email' => 'بريد الكترونى ',
+  'have_account' => 'ليس لدى حساب ',
+  'index' => 'لوحة تحكم   ',
+  'main' => 'الرئيسية',
+  'password' => 'كلمة المرور ',
+  'section' => 'الاقسام ',
+  'sectionall' => 'عرض الاقسام ',
+  'user' => 'الدخول كمستخدم ',
+);

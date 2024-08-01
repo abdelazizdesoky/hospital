@@ -3,7 +3,7 @@
 return array (
   'validation' => 
   array (
-    'numeric' => '',
+    'numeric' => 'حساب',
     'required' => '',
   ),
 );

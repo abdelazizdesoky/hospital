@@ -5,16 +5,16 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">
-                    {{ trans('doctor.delete_doctor') }}</h5>
+                    {{ trans('doctors.delete_doctor') }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ route('doctors.destroy', 'test') }}" method="post">
+            <form action="{{ route('Doctors.destroy', 'test') }}" method="post">
                 {{ method_field('delete') }}
                 {{ csrf_field() }}
                 <div class="modal-body">
-                    <h5>{{trans('section_tran.want_delete')}} {{$doctor->name}}</h5>
+                    <h5>{{trans('section_tran.Warning')}} {{$doctor->name}}</h5>
                     <input type="hidden" value="1" name="page_id">
                     @if($doctor->image)
                         <input type="hidden" name="filename" value="{{$doctor->image->filename}}">
@@ -22,8 +22,8 @@
                     <input type="hidden" name="id" value="{{ $doctor->id }}">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('Dashboard/section_tran.close')}}</button>
-                    <button type="submit" class="btn btn-danger">{{trans('Dashboard/section_tran.delete')}}</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('section_tran.Close')}}</button>
+                    <button type="submit" class="btn btn-danger">{{trans('section_tran.submit')}}</button>
                 </div>
             </form>
         </div>

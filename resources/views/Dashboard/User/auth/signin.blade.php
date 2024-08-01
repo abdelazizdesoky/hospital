@@ -32,11 +32,11 @@
 								<div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
 									<div class="card-sigin">
 										<div class="mb-5 d-flex"> <a href="{{ url('/' . $page='index') }}"><img src="{{URL::asset('Dashboard/img/brand/favicon.png')}}" class="sign-favicon ht-40" alt="logo"></a><h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">
-											{{trans('Dashboard/login_trans.app')}}
+											{{trans('login_trans.app')}}
 										</h1></div>
 										<div class="card-sigin">
 											<div class="main-signup-header">
-												<h2>{{trans('Dashboard/login_trans.Welcome')}}</h2>
+												<h2>{{trans('login_trans.Welcome')}}</h2>
 
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
@@ -51,26 +51,26 @@
 												<div class="form-group">
 													<!-- <label for="exampleFormControlSelect1"> select User</label> -->
 													<select class="form-control" id="sectionChooser">
-													  <option value="" selected disabled>{{trans('Dashboard/login_trans.Choose_list')}}</option>
-													  <option value="user">{{trans('Dashboard/login_trans.user')}}</option>
-													  <option value="admin">{{trans('Dashboard/login_trans.admin')}}</option>
-
+													  <option value="" selected disabled>{{trans('login_trans.Choose_list')}}</option>
+													  <option value="user">{{trans('login_trans.user')}}</option>
+													  <option value="admin">{{trans('login_trans.admin')}}</option>
+                                                      <option value="doctor">{{trans('login_trans.doctor')}}</option>
 													</select>
 												  </div>
 
                                                   {{--form user-----------------------}}
 
                                             <div class="panel" id="user">
-												<h2 >{{trans('Dashboard/login_trans.user')}}</h2>
+												<h2 >{{trans('login_trans.user')}}</h2>
 												<form method="POST" action="{{ route('login.user') }}">
 													@csrf
 													<div class="form-group">
 
-														<label>{{trans('Dashboard/login_trans.email')}}</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
+														<label>{{trans('login_trans.email')}}</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
 
 													</div>
 													<div class="form-group">
-														<label>{{trans('Dashboard/login_trans.password')}}</label> <input class="form-control" placeholder="Enter your password"  type="password"
+														<label>{{trans('login_trans.password')}}</label> <input class="form-control" placeholder="Enter your password"  type="password"
 														name="password"
 														required autocomplete="current-password" />
 
@@ -78,29 +78,29 @@
 
 													@if (Route::has('password.request'))
 													<a  href="{{ route('password.request') }}">
-                                                        <button class="btn btn-main-primary btn-block">{{trans('Dashboard/login_trans.Sign_In')}}</button>
+                                                        <button class="btn btn-main-primary btn-block">{{trans('login_trans.Sign_In')}}</button>
 													</a>
 												@endif
 											</form>
 											<div class="main-signin-footer mt-5">
-												<p><a href="{{route('password.request')}}">{{trans('Dashboard/login_trans.Forgot_password')}}</a></p>
-												<p>{{trans('Dashboard/login_trans.have_account')}} <a href="{{ route('register') }}">  {{trans('Dashboard/login_trans.Create_anAccount')}}</a></p>
+												<p><a href="{{route('password.request')}}">{{trans('login_trans.Forgot_password')}}</a></p>
+												<p>{{trans('login_trans.have_account')}} <a href="{{ route('register') }}">  {{trans('login_trans.Create_anAccount')}}</a></p>
 											</div>
 											</div>
 
 											{{--form admin--------------------}}
 
                                             <div class="panel" id="admin">
-												<h2>{{trans('Dashboard/login_trans.admin')}}</h2>
+												<h2>{{trans('login_trans.admin')}}</h2>
 											<form  method="POST" action="{{ route('login.admin') }}">
 												@csrf
 												<div class="form-group">
 
-													<label>{{trans('Dashboard/login_trans.email')}}</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
+													<label>{{trans('login_trans.email')}}</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
 
 												</div>
 												<div class="form-group">
-													<label>{{trans('Dashboard/login_trans.password')}}</label> <input class="form-control" placeholder="Enter your password"  type="password"
+													<label>{{trans('login_trans.password')}}</label> <input class="form-control" placeholder="Enter your password"  type="password"
 													name="password"
 													required autocomplete="current-password" />
 
@@ -109,17 +109,47 @@
 
 												@if (Route::has('password.request'))
 												<a  href="{{ route('password.request') }}">
-													<button class="btn btn-main-primary btn-block">{{trans('Dashboard/login_trans.Sign_In')}}</button>
+													<button class="btn btn-main-primary btn-block">{{trans('login_trans.Sign_In')}}</button>
 												</a>
 											@endif
 										</form>
 										<div class="main-signin-footer mt-5">
-											<p><a href="{{route('password.request')}}">{{trans('Dashboard/login_trans.Forgot_password')}} </a></p>
-											<p>{{trans('Dashboard/login_trans.have_account')}} <a href="{{ route('register') }}">   {{trans('Dashboard/login_trans.Create_anAccount')}}</a></p>
+											<p><a href="{{route('password.request')}}">{{trans('login_trans.Forgot_password')}} </a></p>
+											<p>{{trans('login_trans.have_account')}} <a href="{{ route('register') }}">   {{trans('login_trans.Create_anAccount')}}</a></p>
 										</div>
 											</div>
 
- 
+                                            {{--form doctor--------------------}}
+
+                                            <div class="panel" id="doctor">
+                                            <h2>{{trans('login_trans.doctor')}}</h2>
+                                            <form  method="POST" action="{{ route('login.doctor') }}">
+                                            @csrf
+                                            <div class="form-group">
+
+                                            <label>{{trans('login_trans.email')}}</label> <input class="form-control" placeholder="Enter your email" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
+
+                                            </div>
+                                            <div class="form-group">
+                                            <label>{{trans('login_trans.password')}}</label> <input class="form-control" placeholder="Enter your password"  type="password"
+                                            name="password"
+                                            required autocomplete="current-password" />
+
+
+                                            </div>
+
+                                            @if (Route::has('password.request'))
+                                            <a  href="{{ route('password.request') }}">
+                                            <button class="btn btn-main-primary btn-block">{{trans('login_trans.Sign_In')}}</button>
+                                            </a>
+                                            @endif
+                                            </form>
+                                            <div class="main-signin-footer mt-5">
+                                            <p><a href="{{route('password.request')}}">{{trans('login_trans.Forgot_password')}} </a></p>
+                                            <p>{{trans('login_trans.have_account')}} <a href="{{ route('register') }}">   {{trans('login_trans.Create_anAccount')}}</a></p>
+                                            </div>
+                                            </div>
+
                                            <!-- end  -->
 											</div>
 										</div>

@@ -26,8 +26,8 @@
                     <input type="hidden" name="id" value="{{ $doctor->id }}">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('section_tran.close')}}</button>
-                    <button type="submit" class="btn btn-primary">{{trans('doctor.submit')}}</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('section_tran.Close')}}</button>
+                    <button type="submit" class="btn btn-primary">{{trans('section_tran.submit')}}</button>
                 </div>
             </form>
         </div>

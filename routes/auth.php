@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminController;
+use App\Http\Controllers\Auth\DoctorController;
 
 //-----register--------middleware guest -------------------------
 
@@ -34,7 +35,13 @@ Route::post('login/admin', [AdminController::class, 'store'])->name('login.admin
 
 
 
- 
+//---------login Doctor-------------------------
+
+Route::post('login/doctor', [DoctorController::class, 'store'])->name('login.doctor');
+
+
+
+
 
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
@@ -58,6 +65,8 @@ Route::post('login/admin', [AdminController::class, 'store'])->name('login.admin
 Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout.user');
 
 Route::post('logout/admin', [AdminController::class, 'destroy'])->middleware('auth:admin')->name('logout.admin');
+
+Route::post('logout/doctor', [DoctorController::class, 'destroy'])->middleware('auth:doctor')->name('logout.doctor');
 
 //----------------------------------------------------------------------------
 

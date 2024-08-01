@@ -10,19 +10,20 @@ use Illuminate\Http\RedirectResponse;
 use App\Providers\RouteServiceProvider;
 
 class DoctorController extends Controller
+
 {
-        public function store(doctorLoginRequest $request)
+    public function store(doctorLoginRequest $request)
 
     {
-      if ($request->authenticate()){
+        if ($request->authenticate()){
 
-        $request->session()->regenerate();
+          $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::DOCTOR);
+          return redirect()->intended(RouteServiceProvider::DOCTOR);
 
-      }else{
+         }else{
 
-        return redirect()->back()->withErrors(['field name']);
+          return redirect()->back()->withErrors(['field name']);
       }
         
 

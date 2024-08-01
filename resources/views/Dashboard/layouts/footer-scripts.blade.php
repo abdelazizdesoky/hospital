@@ -31,3 +31,53 @@
 <!-- custom js -->
 <script src="{{URL::asset('Dashboard/js/custom.js')}}"></script><!-- Left-menu js-->
 <script src="{{URL::asset('Dashboard/plugins/side-menu/sidemenu.js')}}"></script>
+
+
+    <!--Internal  Notify js -->
+    <script src="{{URL::asset('Dashboard/plugins/notify/js/notifIt.js')}}"></script>
+    <script src="{{URL::asset('/plugins/notify/js/notifit-custom.js')}}"></script>
+
+    <!--Internal  Chart.bundle js -->
+<script src="{{URL::asset('Dashboard/plugins/chart.js/Chart.bundle.min.js')}}"></script>
+<!-- Moment js -->
+<script src="{{URL::asset('Dashboard/plugins/raphael/raphael.min.js')}}"></script>
+<!--Internal  Flot js-->
+<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.pie.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.resize.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.categories.js')}}"></script>
+<script src="{{URL::asset('Dashboard/js/dashboard.sampledata.js')}}"></script>
+<script src="{{URL::asset('Dashboard/js/chart.flot.sampledata.js')}}"></script>
+<!--Internal Apexchart js-->
+<script src="{{URL::asset('Dashboard/js/apexcharts.js')}}"></script>
+<!-- Internal Map -->
+<script src="{{URL::asset('Dashboard/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+<script src="{{URL::asset('Dashboard/js/modal-popup.js')}}"></script>
+<!--Internal  index js -->
+<script src="{{URL::asset('Dashboard/js/index.js')}}"></script>
+<script src="{{URL::asset('Dashboard/js/jquery.vmap.sampledata.js')}}"></script>	
+
+
+<!-- Internal Data tables -->
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/dataTables.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/responsive.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/jquery.dataTables.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/dataTables.bootstrap4.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/jszip.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/pdfmake.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/vfs_fonts.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/buttons.html5.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/buttons.print.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/buttons.colVis.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{URL::asset('Dashboard/plugins/datatable/js/responsive.bootstrap4.min.js')}}"></script>
+<!--Internal  Datatable js -->
+<script src="{{URL::asset('Dashboard/js/table-data.js')}}"></script>
+
+
+@livewireScripts

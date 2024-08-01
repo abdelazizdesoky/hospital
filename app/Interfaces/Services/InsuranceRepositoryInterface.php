@@ -6,14 +6,23 @@ namespace App\Interfaces\Services;
 interface InsuranceRepositoryInterface
 {
 
-public function index();
 
-public function store($request);
+    // Get All insurance
+    public function index();
 
-public function update($request);
+    // Create New insurance
+    public function create();
 
-public function destroy($request);
+    // Store new insurance
+    public function store($request);
 
+    // edit insurance
+    public function edit($id);
 
+    // update insurance
+    public function update($request);
+
+    // Deleted insurance
+    public function destroy($request);
 
 }

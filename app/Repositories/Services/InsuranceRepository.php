@@ -6,72 +6,71 @@ use App\Models\Insurance;
 
 class InsuranceRepository implements InsuranceRepositoryInterface
 {
-    //index ---------------------------------------
     public function index()
     {
-         $Insurances = Insurance::all();
-         return view('Dashboard.Services.Insurance.index',compact('Insurances'));
+        $Insurances = Insurance::all();
+        return view('Dashboard.Services.Insurance.index', compact('Insurances'));
     }
 
-  //store------------------------------------------
+    public function create()
+    {
+        return view('Dashboard.Services.Insurance.create');
+    }
 
     public function store($request)
     {
+        try {
+            $insurances = new Insurance();
+            $insurances->insurance_code = $request->insurance_code;
+            $insurances->discount_percentage = $request->discount_percentage;
+            $insurances->company_rate = $request->company_rate;
+            $insurances->status = 1;
+            $insurances->save();
 
-         Insurance::create([
-
-
-
-            'insurance_code' => $request->input('insurance_code'),
-            'discount_percentage' => $request->input('discount_percentage'),
-            'company_rate' => $request->input('company_rate'),
-            'status'=> 1,
-
-            'name' => $request->input('name'),
-            'note' => $request->input('note'),
-
-         ]);
-
-         session()->flash('add');
-
-         return redirect()->route('Insurance.index');
+            // insert trans
+            $insurances->name = $request->name;
+            $insurances->note = $request->note;
+            $insurances->save();
+            session()->flash('add');
+            return redirect('Insurance');
+        }
+        catch (\Exception $e) {
+            return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
-    //update-----------------------------------
+    public function edit($id)
+    {
+        $insurances = Insurance::findorfail($id);
+        return view('Dashboard.Services.Insurance.edit', compact('insurances'));
+    }
 
     public function update($request)
     {
+        if (!$request->has('status'))
+            $request->request->add(['status' => 0]);
+        else
+            $request->request->add(['status' => 1]);
 
-         $Insurance = Insurance::findOrfail($request->id);
-         $Insurance->update([
+        $insurances = Insurance::findOrFail($request->id);
 
-            'name' => $request->input('name'),
-            'insurance_code' => $request->input('insurance_code'),
-            'discount_percentage' => $request->input('discount_percentage'),
-            'company_rate' => $request->input('company_rate'),
-            'status'=>$request->input('status') ,
-            'note' => $request->input('note'),
-         ]);
+        $insurances->update($request->all());
 
-         session()->flash('edit');
+        // insert trans
+        $insurances->name = $request->name;
+        $insurances->note = $request->note;
+        $insurances->save();
 
-         return redirect()->route('Insurance.index');
-
+        session()->flash('edit');
+        return redirect('Insurance');
     }
 
-    //delete=--------------------------------
     public function destroy($request)
     {
-
-     Insurance::findOrfail($request->id)->delete();
-
-
-          session()->flash('delete');
-
-         return redirect()->route('Insurance.index');
-
+        Insurance::destroy($request->id);
+        session()->flash('delete');
+        return redirect('Insurance');
     }
-
 
 
 

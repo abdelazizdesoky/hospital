@@ -1,16 +1,26 @@
 <?php
 
 return array (
+  'Close' => 'اغلاق',
+  'Warning' => 'هل تريد حذف',
   'add' => 'اضافة قسم ',
+  'add_section' => 'اضافة قسم',
   'all' => ' عرض الكل  ',
   'close' => ' اغلاق ',
+  'created_at' => 'تاريخ انشاء',
   'date_update' => ' تاريخ الاضافة   ',
   'delete' => 'حذف  ',
+  'delete_sections' => 'حذف القسم',
   'description' => 'الوصف',
   'edit' => 'تعديل',
+  'edit_sections' => 'تعديل قسم',
+  'name' => 'القسم',
+  'name_sections' => 'القسم',
   'operation' => ' العمليات  ',
+  'processes' => 'اجراءات',
   'save' => 'حفظ  ',
   'section' => ' القسم  ',
   'sections' => ' الاقسام   ',
+  'submit' => 'تاكيد',
   'want_delete' => '؟هل تريد الحذف   ',
 );

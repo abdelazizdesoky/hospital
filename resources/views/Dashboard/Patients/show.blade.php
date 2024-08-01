@@ -3,15 +3,15 @@
 
 @endsection
 @section('title')
-    معلومات المريض
+    
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">Pages</h4><span
-                    class="text-muted mt-1 tx-13 mr-2 mb-0">/ Empty</span>
+                <h4 class="content-title mb-0 my-auto">{{trans('Patient.Patients')}}</h4><span
+                    class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$Patient->name}}</span>
             </div>
         </div>
     </div>
@@ -32,15 +32,15 @@
                                         <ul class="nav panel-tabs main-nav-line">
                                             <li class="nav-item"><a href="#tab1" class="nav-link active"
                                                                     data-toggle="tab">معلومات المريض</a></li>
-                                            <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">الفواتير</a>
+                                            <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">{{trans('Patient.info')}}</a>
                                             </li>
-                                            <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">المدفوعات</a>
+                                            <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">{{trans('Patient.invioce')}}</a>
                                             </li>
-                                            <li class="nav-item"><a href="#tab4" class="nav-link" data-toggle="tab">كشف
-                                                    حساب</a></li>
-                                            <li class="nav-item"><a href="#tab5" class="nav-link" data-toggle="tab">الاشعه</a>
+                                            <li class="nav-item"><a href="#tab4" class="nav-link" data-toggle="tab">{{trans('Patient.payment')}}
+                                                    </a></li>
+                                            <li class="nav-item"><a href="#tab5" class="nav-link" data-toggle="tab">{{trans('Patient.ray')}}</a>
                                             </li>
-                                            <li class="nav-item"><a href="#tab6" class="nav-link" data-toggle="tab">المختبر</a>
+                                            <li class="nav-item"><a href="#tab6" class="nav-link" data-toggle="tab">{{trans('Patient.insourans')}}</a>
                                             </li>
                                         </ul>
                                     </div>

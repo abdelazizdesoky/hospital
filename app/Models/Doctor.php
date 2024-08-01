@@ -8,9 +8,11 @@ use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 
-class Doctor extends Model
+class Doctor extends Authenticatable
 {
     use Translatable; // 2. To add translation methods
 
@@ -18,7 +20,7 @@ class Doctor extends Model
     public $translatedAttributes = ['name'];
 
     protected $fillable = ['name','email'.'email_verified_at','password','phone','status'];
-    use HasFactory;
+    use HasApiTokens,HasFactory;
 
        /**
      * Get the Doctor's image.
@@ -37,4 +39,10 @@ class Doctor extends Model
     {
         return $this->belongsTo(Section::class);
     }
+
+    public function doctorappointments()
+    {
+        return $this->belongsToMany(Appointment::class,'appointment_doctor');
+    }
+
 }

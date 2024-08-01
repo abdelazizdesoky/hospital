@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>	{{trans('login_trans.app')}}</title>
 	<head>
 		<meta charset="UTF-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
@@ -10,16 +11,16 @@
 		@include('Dashboard.layouts.head')
 	</head>
 
-	<body class="main-body sidebar-mini">
+	<body class="main-body app sidebar-mini">
 		<!-- Loader -->
 		<div id="global-loader">
 			<img src="{{URL::asset('Dashboard/img/loader.svg')}}" class="loader-img" alt="Loader">
 		</div>
 		<!-- /Loader -->
-		@include('Dashboard.layouts.main-sidebar')		
+		@include('Dashboard.layouts.main-sidebar')
 		<!-- main-content -->
 		<div class="main-content app-content">
-			@include('Dashboard.layouts.main-header')			
+			@include('Dashboard.layouts.main-header')
 			<!-- container -->
 			<div class="container-fluid">
 				@yield('page-header')
@@ -27,6 +28,6 @@
 				@include('Dashboard.layouts.sidebar')
 				@include('Dashboard.layouts.models')
             	@include('Dashboard.layouts.footer')
-				@include('Dashboard.layouts.footer-scripts')	
+				@include('Dashboard.layouts.footer-scripts')
 	</body>
 </html>
